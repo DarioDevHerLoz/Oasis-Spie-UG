@@ -11,12 +11,20 @@
   <link rel="stylesheet" href="/build/css/app.css">
 
 </head>
-<body class="bg__negro">
+<body>
   <?php 
-    include_once __DIR__ .'/templates/header.php';
-      echo $contenido;
-    include_once __DIR__ .'/templates/footer.php'; 
+    include_once __DIR__ .'/templates/admin-header.php';
   ?>
-  <script src="/build/js/main.min.js" defer></script>
+  <div class="dashboard__grid">
+    <?php
+      include_once __DIR__ .'/templates/admin-sidebar.php';  
+    ?>
+
+  <main class="dashboard__contenido">
+    <?php 
+      echo $contenido; 
+    ?> 
+  </main>
+</div>
 </body>
 </html>
