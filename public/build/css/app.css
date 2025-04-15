@@ -337,6 +337,8 @@ html {
 body {
   font-family: "Noto Sans Georgian", sans-serif;
   font-size: 1.8rem;
+  color: #FFFFFF;
+  background-color: #000000;
 }
 
 a {
@@ -346,5 +348,29 @@ a {
 img {
   width: 100%;
   height: auto;
+}
+
+.bg__negro {
+  background-color: #000000;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.body {
+  position: relative;
+  z-index: 99;
+}
+
+.no-webp .inicio {
+  background-image: url(../img/hero.jpg);
+}
+
+.webp .inicio {
+  background-image: url(../img/hero.webp);
 }
 /*# sourceMappingURL=app.css.map */

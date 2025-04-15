@@ -12,11 +12,16 @@
 
 </head>
 <body class="bg__negro">
-  <?php 
-    include_once __DIR__ .'/templates/header.php';
-      echo $contenido;
-    include_once __DIR__ .'/templates/footer.php'; 
-  ?>
+  <!-- particles.js container --> <div id="particles-js"></div> 
+   <div class="body">
+    <?php 
+      include_once __DIR__ .'/templates/header.php';
+        echo $contenido;
+      include_once __DIR__ .'/templates/footer.php'; 
+    ?>
+   </div>
+
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
   <script src="/build/js/main.min.js" defer></script>
 </body>
 </html>
