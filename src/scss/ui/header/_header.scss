@@ -1,7 +1,63 @@
-.no-webp .inicio {
-  background-image: url(../img/hero.jpg);
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use "sass:color";
+
+.header{
+  background-color: v.$blanco;
+  color: v.$negro;
+  &__contenido{
+    margin: 0 1rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.tablet {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__barra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.tablet {
+      width: 70%;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  } 
+
+  &__enlace {
+    text-decoration: none;
+    color: v.$negro;
+    font-weight: v.$regular;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+      color: v.$rojo;
+    }
+  }
+  &__logo{
+    text-decoration: none;
+    color: v.$negro;
+    font-size: 2.5rem;
+    font-weight: v.$bold;
+    &-red {
+      color: v.$rojo;
+    }
+  }
 }
 
-.webp .inicio {
-  background-image: url(../img/hero.webp);
+.inicio {
+  height: 100vh;
+  background-image: 
+    linear-gradient(to right, rgba(v.$negro, 0.5), rgba(v.$negro, 0.5)),
+    url('../img/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  &__organizacion {
+    margin: 0;
+  }
 }

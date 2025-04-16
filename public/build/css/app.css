@@ -366,11 +366,83 @@ img {
   z-index: 99;
 }
 
-.no-webp .inicio {
-  background-image: url(../img/hero.jpg);
+.header {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.header__contenido {
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header__contenido {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.header__barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header__barra {
+    width: 70%;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+.header__enlace {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.header__enlace:hover {
+  cursor: pointer;
+  color: #990617;
+}
+.header__logo {
+  text-decoration: none;
+  color: #000000;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.header__logo-red {
+  color: #990617;
 }
 
-.webp .inicio {
-  background-image: url(../img/hero.webp);
+.inicio {
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.inicio__organizacion {
+  margin: 0;
+}
+
+.footer__contenido {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+.footer__redes {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer__logo {
+  font-size: 3.5rem;
+}
+.footer__logo-red {
+  color: #990617;
 }
 /*# sourceMappingURL=app.css.map */

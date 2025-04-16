@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+@use "sass:color";
+
+.footer {
+  &__contenido {
+    @include  m.grid(1,2rem);
+    justify-items: center;
+  }
+  &__redes {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  &__logo {
+    font-size: 3.5rem;
+    &-red {
+      color: v.$rojo;
+    }
+  }
+}

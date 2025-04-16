@@ -1,18 +1,16 @@
 
-<header class="header <?php echo $inicio ? 'inicio' : ''; // si la var inicio es verdad se le agrega la clese si no no se le agrega?>">
+<header class="header">
   <div class="header__contenido">
-    <div class="header__barra">
-      <a href="/">
-        <p>Oasis Spie UG</p>
+      <a class="header__logo" href="/">
+        <p> <span class="header__logo-red">Oasis</span> Spie UG <span class="header__logo-red">.</span></p>
       </a>
-      <div class="">
-        <a href="/nosotros">Nosotros</a>
-        <a href="/equipo">Nosotros</a>
-        <a href="/noticias">Nosotros</a>
-        <a href="/eventos">Nosotros</a>
-        <a href="/blog">Nosotros</a>
-        <a href="/calendario-astronomico">Calendario Astronomico</a>
+      <div class="header__barra">
+        <a class="header__enlace" href="/nosotros">Nosotros</a>
+        <a class="header__enlace"  href="/equipo">Equipo</a>
+        <a class="header__enlace"  href="/noticias">Noticias</a>
+        <a class="header__enlace"  href="/eventos">Eventos</a>
+        <a class="header__enlace"  href="/blog">Blog</a>
+        <a class="header__enlace"  href="/calendario-astronomico">Calendario Astronomico</a>
       </div>
-    </div>
   </div>
 </header>
