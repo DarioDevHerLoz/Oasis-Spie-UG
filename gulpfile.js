@@ -1,21 +1,20 @@
-import { src, dest, watch, parallel } from 'gulp';
-import * as dartSass from 'sass';
-import gulpSassFactory from 'gulp-sass';
+const { src, dest, watch, parallel } = require('gulp');
+const dartSass = require('sass');
+const gulpSassFactory = require('gulp-sass');
 const gulpSass = gulpSassFactory(dartSass);
 
-import plumber from 'gulp-plumber';
-import autoprefixer from 'autoprefixer';
-import postcss from 'gulp-postcss';
-import sourcemaps from 'gulp-sourcemaps';
-import cache from 'gulp-cache';
-import imageminLib from 'gulp-imagemin';
-const imagemin = imageminLib.default; // Necesario por ser ESM
-import webp from 'gulp-webp';
-import avif from 'gulp-avif';
-import terser from 'gulp-terser-js';
-import concat from 'gulp-concat';
-import rename from 'gulp-rename';
-import webpackStream from 'webpack-stream';
+const plumber = require('gulp-plumber');
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const sourcemaps = require('gulp-sourcemaps');
+const cache = require('gulp-cache');
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const avif = require('gulp-avif');
+const terser = require('gulp-terser-js');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const webpackStream = require('webpack-stream');
 
 const paths = {
     scss: 'src/scss/**/*.scss',
@@ -79,5 +78,11 @@ function dev() {
     watch(paths.imagenes, parallel(imagenes, versionWebp, versionAvif));
 }
 
-export { css, javascript as js, imagenes, versionWebp, versionAvif, dev };
-export default parallel(css, imagenes, versionWebp, versionAvif, javascript, dev);
+// Exportaciones para Gulp
+exports.css = css;
+exports.js = javascript;
+exports.imagenes = imagenes;
+exports.versionWebp = versionWebp;
+exports.versionAvif = versionAvif;
+exports.dev = dev;
+exports.default = parallel(css, imagenes, versionWebp, versionAvif, javascript, dev);
