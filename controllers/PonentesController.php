@@ -7,7 +7,7 @@ class PonentesController {
 
         
         $router->render('admin/ponentes/index',[
-
+            'titulo' => 'Ponentes',
         ]);
     }
 }

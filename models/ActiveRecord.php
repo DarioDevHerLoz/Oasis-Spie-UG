@@ -6,6 +6,7 @@ class ActiveRecord {
   protected static $db;
   protected static $tabla = '';
   protected static $columnasDB = [];
+  public $id;
 
   // Alertas y Mensajes
   protected static $alertas = [];
@@ -22,6 +23,11 @@ class ActiveRecord {
 
   // Obtener las alertas 
   public static function getAlertas() {
+    return static::$alertas;
+  }
+
+  public function validar(){
+    static::$alertas = [];
     return static::$alertas;
   }
 
@@ -91,6 +97,7 @@ public function guardar() {
     } else {
         // Creando un nuevo registro
         $resultado = $this->crear();
+
     }
     return $resultado;
 }
@@ -188,7 +195,6 @@ public static function totalArray($array = []) {
 public function crear() {
     // Sanitizar los datos
     $atributos = $this->sanitizarAtributos();
-
     // Insertar en la base de datos
     $query = " INSERT INTO " . static::$tabla . " ( ";
     $query .= join(', ', array_keys($atributos));

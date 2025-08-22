@@ -7,7 +7,7 @@ class NoticiasController {
 
         
         $router->render('admin/noticias/index',[
-
+            'titulo' => 'Noticias',
         ]);
     }
 }

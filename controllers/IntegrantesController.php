@@ -7,7 +7,7 @@ class IntegrantesController {
 
         
         $router->render('admin/integrantes/index',[
-
+            'titulo' => 'Integrantes',
         ]);
     }
 }

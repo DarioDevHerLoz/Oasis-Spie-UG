@@ -7,7 +7,7 @@ class HorasController {
 
         
         $router->render('admin/horas/index',[
-
+            'titulo' => 'Horas',
         ]);
     }
 }

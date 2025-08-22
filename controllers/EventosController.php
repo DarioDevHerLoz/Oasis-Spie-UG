@@ -7,7 +7,7 @@ class EventosController {
 
         
         $router->render('admin/eventos/index',[
-            
+            'titulo' => 'Eventos',
         ]);
     }
 }

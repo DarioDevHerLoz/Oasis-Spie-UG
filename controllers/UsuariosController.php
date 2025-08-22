@@ -7,7 +7,7 @@ class UsuariosController {
 
         
         $router->render('admin/usuarios/index',[
-
+            'titulo' => 'Usuarios',
         ]);
     }
 }

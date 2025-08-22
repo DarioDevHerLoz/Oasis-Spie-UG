@@ -5,7 +5,7 @@ class Ponentes extends ActiveRecord {
     protected static $tabla = 'ponentes';
     protected static $columnasDB = ['ponentes_id', 'ponentes_nombre','ponentes_apellido', 'ponentes_habilidades','ponentes_imagen'];
 
-    public $ponentes_id;
+    public $id;
     public $ponentes_nombre;
     public $ponentes_apellido;
     public $ponentes_habilidades;
@@ -14,7 +14,7 @@ class Ponentes extends ActiveRecord {
 
     public function __construct($args = [])
     {
-        $this->ponentes_id = $args['ponentes_id'] ?? null;
+        $this->id = $args['id'] ?? null;
         $this->ponentes_nombre = $args['ponentes_nombre'] ?? null;
         $this->ponentes_apellido = $args['ponentes_apellido'] ?? null;
         $this->ponentes_habilidades = $args['ponentes_habilidades'] ?? null;

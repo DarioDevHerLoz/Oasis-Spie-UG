@@ -1,6 +1,6 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
-@use 'sass:color'; // o la ruta correcta al módulo
+@use 'sass:color';
 
 .dashboard {
     background-color: v.$gris-claro;
@@ -19,6 +19,10 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
+    &__heading {
+        color: v.$negro;
+        text-align: center;
     }
 
     &__logo {
@@ -43,11 +47,13 @@
 
     &__sidebar {
         background-color: color.adjust(v.$gris-oscuro, $lightness: 10%);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        
         width: 12rem;
     }
 
     &__menu {
-        padding: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,10 +118,16 @@
     &__formulario {
         @extend .dashboard__contenedor;
         @include m.contenedor-md;
+        padding: 1rem;
     }
 
     &__garfica {
         @include m.contenedor-sm;
+    }
+
+    &__void{
+        color: v.$negro;
+        padding: 1rem;
     }
 
 

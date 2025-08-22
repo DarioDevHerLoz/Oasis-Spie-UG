@@ -7,7 +7,7 @@ class BlogController {
 
         
         $router->render('admin/blog/index',[
-
+            'titulo' => 'Blog',
         ]);
     }
 }

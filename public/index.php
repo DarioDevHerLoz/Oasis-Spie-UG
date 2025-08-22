@@ -31,7 +31,15 @@ $router->get('/calendario-astronomico',[PaginasController::class, 'calendario_as
 // Area de administracion
 $router->get('/admin/dashboard',[DashboardController::class, 'index']);
 $router->get('/admin/blog',[BlogController::class, 'index']);
+
 $router->get('/admin/dias',[DiasController::class, 'index']);
+$router->get('/admin/dias/crear',[DiasController::class, 'crear']);
+$router->post('/admin/dias/crear',[DiasController::class, 'crear']);
+$router->get('/admin/dias/actualizar',[DiasController::class, 'actualizar']);
+$router->post('/admin/dias/actualizar',[DiasController::class, 'actualizar']);
+$router->post('/admin/dias/eliminar',[DiasController::class, 'delete']);
+
+
 $router->get('/admin/eventos',[EventosController::class, 'index']);
 $router->get('/admin/horas',[HorasController::class, 'index']);
 $router->get('/admin/integrantes',[IntegrantesController::class, 'index']);
