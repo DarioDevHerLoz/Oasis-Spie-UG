@@ -9,7 +9,7 @@
             class="formulario__input"
             id="dia_nombre"
             name="dia_nombre"
-            value="<?php echo $dia->dia_nombre; ''; ?>"
+            value="<?php echo $dia->dia_nombre;?>"
             placeholder="Ej. Lunes, Martes, Miercoles"
         >
     </div>
