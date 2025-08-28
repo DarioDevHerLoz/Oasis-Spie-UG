@@ -39,9 +39,15 @@ $router->get('/admin/dias/actualizar',[DiasController::class, 'actualizar']);
 $router->post('/admin/dias/actualizar',[DiasController::class, 'actualizar']);
 $router->post('/admin/dias/eliminar',[DiasController::class, 'delete']);
 
+$router->get('/admin/horas',[HorasController::class, 'index']);
+$router->get('/admin/horas/crear',[HorasController::class, 'crear']);
+$router->post('/admin/horas/crear',[HorasController::class, 'crear']);
+$router->get('/admin/horas/actualizar',[HorasController::class, 'actualizar']);
+$router->post('/admin/horas/actualizar',[HorasController::class, 'actualizar']);
+$router->post('/admin/horas/delete',[HorasController::class, 'delete']);
 
 $router->get('/admin/eventos',[EventosController::class, 'index']);
-$router->get('/admin/horas',[HorasController::class, 'index']);
+
 $router->get('/admin/integrantes',[IntegrantesController::class, 'index']);
 $router->get('/admin/noticias',[NoticiasController::class, 'index']);
 $router->get('/admin/ponentes',[PonentesController::class, 'index']);
