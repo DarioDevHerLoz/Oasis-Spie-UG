@@ -10,6 +10,24 @@ class UsuariosController {
             'titulo' => 'Usuarios',
         ]);
     }
+
+    public static function crear(Router $router){
+
+        $router->render('admin/usuarios/crear',[
+            'titulo' => 'Crear Usuario'
+        ]);
+    }
+
+    public static function actualizar(Router $router){
+
+        $router->render('admin/usuarios/actualizar',[
+            'titulo' => 'Actualizar Usuario'
+        ]);
+    }
+
+    public static function delete(Router $router){
+        
+    }
 }
 
 

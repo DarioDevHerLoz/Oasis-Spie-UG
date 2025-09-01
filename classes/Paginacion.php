@@ -32,6 +32,7 @@ class Paginacion {
         //Si total es cero entonces se asigna 1 si es mayor a cero
         // se asigna al mismo total
         $total == 0 ? $total = 1 : $total = $total;
+        return $total;
     }
 
     public function pagina_anterior() {
