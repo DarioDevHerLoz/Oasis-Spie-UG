@@ -8,9 +8,9 @@ use Intervention\Image\ImageManagerStatic as Image;
 
 class IntegrantesController {
     public static function index(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $pagina_actual = $_GET['page'];
         $pagina_actual = filter_var($pagina_actual, FILTER_VALIDATE_INT);
@@ -37,16 +37,16 @@ class IntegrantesController {
     }
 
     public static function crear(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
         $alertas = [];
         $integrante = new Integrantes;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // }
+            if(!is_auth()){
+                header('Location: /login');
+            }
 
             //Leer imagen
             if(!empty($_FILES['integrantes_imagen']['tmp_name'])){
@@ -92,9 +92,9 @@ class IntegrantesController {
     }
 
     public static function actualizar(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $alertas = [];
         // Validar el ID
@@ -115,9 +115,9 @@ class IntegrantesController {
         $integrante->imagen_actual = $integrante->integrantes_imagen;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // }
+            if(!is_auth()){
+                header('Location: /login');
+            }
             //Leer imagen
             if(!empty($_FILES['integrantes_imagen']['tmp_name'])){
                 $carpeta_imagenes = '../public/img/integrantes';
@@ -167,9 +167,9 @@ class IntegrantesController {
 
     public static function delete(Router $router){
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // }
+            if(!is_auth()){
+                header('Location: /login');
+            }
 
             $id = $_POST['id'];
             $integrante = Integrantes::find($id);

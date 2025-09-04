@@ -26,7 +26,16 @@ class Usuarios extends ActiveRecord {
     }
 
     public function validar_login(){
-
+        if(!$this->usuario_correo) {
+            self::$alertas['error'][] = 'El Correo es Obligatorio';
+        }
+        if(!filter_var($this->usuario_correo, FILTER_VALIDATE_EMAIL)) {
+            self::$alertas['error'][] = 'Email no válido';
+        }
+        if(!$this->usuario_password){
+            self::$alertas['error'][] = 'El Password no puede ir vacio';
+        }
+        return self::$alertas;
     }
 
     public function validar_usuario() {
@@ -40,6 +49,9 @@ class Usuarios extends ActiveRecord {
 
         if(!$this->usuario_password){
             self::$alertas['error'][] = 'El Password es Obligatorio';
+        }
+        if(!$this->usuario_correo) {
+            self::$alertas['error'][] = 'El Correo es Obligatorio';
         }
         if(!$this->usuario_password) {
             self::$alertas['error'][] = 'El Password no puede ir vacio';
@@ -60,6 +72,10 @@ class Usuarios extends ActiveRecord {
 
         if(!$this->usuario_apellido){
             self::$alertas['error'][] = 'El Apellido es Obligatorio';
+        }
+
+        if(!$this->usuario_correo) {
+            self::$alertas['error'][] = 'El Correo es Obligatorio';
         }
 
         if(!$this->usuario_password){

@@ -5,9 +5,9 @@ use Model\Dias;
 use MVC\Router;
 class DiasController {
     public static function index(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $dias = Dias::all();
 
@@ -18,17 +18,17 @@ class DiasController {
     }
 
     public static function crear(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $alertas = [];
         $dia = new Dias;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // }
+            if(!is_auth()){
+                header('Location: /login');
+            }
 
             $dia->sincronizar($_POST);
 
@@ -51,9 +51,9 @@ class DiasController {
     }
 
     public static function actualizar(Router $router){
-        // if(!is_admin()) {
-        //     header('Location: /login');
-        // }
+        if(!is_auth()) {
+            header('Location: /login');
+        }
 
         $alertas = [];
 
@@ -72,9 +72,9 @@ class DiasController {
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()) {
-            //     header('Location: /login');
-            // }
+            if(!is_auth()) {
+                header('Location: /login');
+            }
             $dia->sincronizar(($_POST));
             $alertas = $dia->validar();
 
@@ -96,9 +96,9 @@ class DiasController {
 
     public static function delete(Router $router){
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()) {
-            //header('Location: /login');
-            // }
+            if(!is_auth()) {
+            header('Location: /login');
+            }
             $id = $_POST['id'];
             $dia = Dias::find($id);
 

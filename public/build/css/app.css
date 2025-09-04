@@ -570,6 +570,25 @@ img {
   color: hsl(108.0628272251, 95.0248756219%, -0.5882352941%);
 }
 
+.auth {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.692);
+  border-radius: 2rem;
+}
+.auth__heading {
+  color: #FFFFFF;
+  text-align: center;
+}
+.auth .formulario__label {
+  color: #FFFFFF;
+}
+
+.auth__texto {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
 .dashboard {
   background-color: #F8FAFC;
   height: 100%;

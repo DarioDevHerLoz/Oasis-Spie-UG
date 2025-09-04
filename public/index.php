@@ -1,5 +1,6 @@
 <?php
 
+use Controllers\AuthController;
 use Controllers\BlogController;
 use Controllers\DashboardController;
 use Controllers\DiasController;
@@ -27,6 +28,12 @@ $router->get('/noticias',[PaginasController::class, 'noticias']);
 $router->get('/eventos',[PaginasController::class, 'eventos']);
 $router->get('/blog',[PaginasController::class, 'blog']);
 $router->get('/calendario-astronomico',[PaginasController::class, 'calendario_astronomico']);
+
+//Login
+
+$router->get('/login',[AuthController::class, 'login']);
+$router->post('/login',[AuthController::class, 'login']);
+$router->post('/logout',[AuthController::class, 'logout']);
 
 // Area de administracion
 $router->get('/admin/dashboard',[DashboardController::class, 'index']);

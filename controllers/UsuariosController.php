@@ -5,9 +5,9 @@ use Model\Usuarios;
 use MVC\Router;
 class UsuariosController {
     public static function index(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
         $usuarios = Usuarios::all();
 
 
@@ -19,9 +19,9 @@ class UsuariosController {
     }
 
     public static function crear(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
         $alertas = [];
         $usuario = new Usuarios;
 
@@ -61,9 +61,9 @@ class UsuariosController {
     }
 
     public static function actualizar(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
         $alertas = [];
         //Validar el id 
         $id = $_GET['id'];
@@ -79,9 +79,9 @@ class UsuariosController {
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // } 
+            if(!is_auth()){
+                header('Location: /login');
+            } 
             $usuario->sincronizar($_POST);
             $alertas = $usuario->validar_actualizar();
             if(empty($alertas)){

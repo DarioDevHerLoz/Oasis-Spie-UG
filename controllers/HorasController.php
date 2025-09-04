@@ -5,9 +5,9 @@ use Model\Horas;
 use MVC\Router;
 class HorasController {
     public static function index(Router $router){
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $horas = Horas::all();
         
@@ -18,17 +18,17 @@ class HorasController {
     }
 
     public static function crear(Router $router) {
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
 
         $alertas = [];
         $hora = new Horas;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // if(!is_admin()){
-            //     header('Location: /login');
-            // }
+            if(!is_auth()){
+                header('Location: /login');
+            }
 
             $hora->sincronizar($_POST);
 
@@ -50,9 +50,9 @@ class HorasController {
     }
 
     public static function actualizar(Router $router) {
-        // if(!is_admin()){
-        //     header('Location: /login');
-        // }
+        if(!is_auth()){
+            header('Location: /login');
+        }
         $alertas = [];
 
         //validar el id
@@ -68,9 +68,9 @@ class HorasController {
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()) {
-            //     header('Location: /login');
-            // } 
+            if(!is_auth()) {
+                header('Location: /login');
+            } 
             $hora->sincronizar($_POST);
             $alertas = $hora->validar();
             if(empty($alertas)){
@@ -89,9 +89,9 @@ class HorasController {
 
     public static function delete(Router $router) {
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
-            // if(!is_admin()) {
-            //header('Location: /login');
-            // }
+            if(!is_auth()) {
+            header('Location: /login');
+            }
             $id = $_POST['id'];
             $hora = Horas::find($id);
 

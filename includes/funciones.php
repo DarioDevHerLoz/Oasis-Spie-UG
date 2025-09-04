@@ -20,7 +20,7 @@ function is_auth() : bool {
   if(!isset($_SESSION)){
     session_start();
   }
-  return isset($_SESSION['nombre']) && !empty($_SESSION);
+  return isset($_SESSION['usuario_nombre']) && !empty($_SESSION);
 }
 
 function is_admin() : bool {

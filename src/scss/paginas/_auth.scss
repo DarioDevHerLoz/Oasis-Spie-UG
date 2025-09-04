@@ -1,0 +1,21 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.auth {
+    @include m.contenedor-sm;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 2rem;
+    &__heading {
+        color: v.$blanco;
+        text-align: center;
+    }
+
+    .formulario__label{
+        color: v.$blanco;
+    }
+}
+
+.auth__texto {
+    font-size: 2rem;
+    color: v.$blanco;
+}
