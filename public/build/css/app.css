@@ -744,13 +744,14 @@ img {
 }
 .table__td--acciones {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 2rem;
   align-items: center;
 }
 .table__accion {
   all: unset;
   text-transform: uppercase;
+  display: flex;
   font-size: 1.4rem;
   font-weight: 700;
 }

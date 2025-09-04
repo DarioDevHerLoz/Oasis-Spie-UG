@@ -62,7 +62,6 @@ $router->get('/admin/usuarios/crear',[UsuariosController::class, 'crear']);
 $router->post('/admin/usuarios/crear',[UsuariosController::class, 'crear']);
 $router->get('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
 $router->post('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
-$router->get('/admin/usuarios/delete',[UsuariosController::class, 'delete']);
 
 
 

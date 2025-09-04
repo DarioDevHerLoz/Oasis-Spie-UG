@@ -16,7 +16,7 @@
                     <th scope="col" class="table__th">Nombre</th>
                     <th scope="col" class="table__th">Correo</th>
                     <th scope="col" class="table__th">Rol</th>
-                    <th scope="col" class="table__th">Acciones</th>
+                    <th scope="col" class="table__th--acciones">Acciones</th>
                 </tr>
             </thead>
             <tbody class="table__tbody">
@@ -34,7 +34,7 @@
                         <td class="table__td">
                             <?php echo $integrante->integrantes_rol ?>
                         </td>
-                        <td class="table__td--acciones">
+                        <td class="table__td--accion">
                             <a class="table__accion table__accion--editar" href="/admin/integrantes/actualizar?id=<?php echo $integrante->id?>">
                                 <i class="fa-solid fa-user-pen"></i>
                                 Editar

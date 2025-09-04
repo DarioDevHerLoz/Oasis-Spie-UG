@@ -10,20 +10,22 @@
 <div class="dashboard__contenedor">
     <?php  if(!empty($usuarios)) {?>
         <table class="table">
-            <thead class="table_thead">
+            <thead class="table__thead">
                 <tr class="">
                     <th scope="col" class="table__th">id</th>
-                    <th scope="col" class="table__th">Dia</th>
-                    <th scope="col" class="table__th"></th>
+                    <th scope="col" class="table__th">Nombre</th>
+                    <th scope="col" class="table__th">Correo</th>
+                    <th scope="col" class="table__th">Acciones</th>
                 </tr>
             </thead>
             <tbody class="table__tbody">
                 <?php foreach($usuarios as $usuario) { ?>
                     <tr class="table__tr">
-                        <td class="table__td"></td>
-                        <td class="table__td"></td>
-                        <td class="table__td--acciones">
-                            <a class="table__accion table__accion--editar" href="/admin/dias/editar?id">
+                        <td class="table__td"> <?php echo $usuario->id; ?> </td>
+                        <td class="table__td"> <?php echo $usuario->usuario_nombre . ' ' . $usuario->usuario_apellido; ?> </td>
+                        <td class="table__td"> <?php echo $usuario->usuario_correo; ?> </td>
+                        <td class="table__td--accion">
+                            <a class="table__accion table__accion--editar" href="/admin/usuarios/actualizar?id=<?php echo $usuario->id; ?>">
                                 <i class="fa-solid fa-user-pen"></i>
                                 Editar
                             </a>
