@@ -42,7 +42,7 @@ class Integrantes extends ActiveRecord {
         }
 
         if(!$this->integrantes_imagen){
-            self::$alertas['error'][] = 'El Nombre es obligatorio';
+            self::$alertas['error'][] = 'La imagen es obligatoria';
         }
         return self::$alertas;
     }

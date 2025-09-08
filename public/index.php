@@ -61,7 +61,15 @@ $router->post('/admin/integrantes/crear',[IntegrantesController::class, 'crear']
 $router->get('/admin/integrantes/actualizar',[IntegrantesController::class, 'actualizar']);
 $router->post('/admin/integrantes/actualizar',[IntegrantesController::class, 'actualizar']);
 $router->post('/admin/integrantes/delete',[IntegrantesController::class, 'delete']);
+
 $router->get('/admin/noticias',[NoticiasController::class, 'index']);
+$router->get('/admin/noticias/crear',[NoticiasController::class, 'crear']);
+$router->post('/admin/noticias/crear',[NoticiasController::class, 'crear']);
+$router->get('/admin/noticias/actualizar',[NoticiasController::class, 'actualizar']);
+$router->post('/admin/noticias/actualizar',[NoticiasController::class, 'actualizar']);
+$router->post('/admin/noticias/delete',[NoticiasController::class, 'delete']);
+
+
 $router->get('/admin/ponentes',[PonentesController::class, 'index']);
 
 $router->get('/admin/usuarios',[UsuariosController::class, 'index']);

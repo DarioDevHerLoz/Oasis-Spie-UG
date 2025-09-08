@@ -13,7 +13,7 @@
                 placeholder="Tu Email"
                 id="usuario_correo"
                 name="usuario_correo"
-                value="<?php $usuario->usuario_correo ?>"
+                value=""
             >
         </div>
 
