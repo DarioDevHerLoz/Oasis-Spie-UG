@@ -1,7 +1,7 @@
 <h2 class="dashboard__heading"><?php echo $titulo ?></h2>
 
 <div class="dashboard__contenedor-boton">
-    <a href="/admin/noticias" class="dashboard__boton">
+    <a href="/admin/blog" class="dashboard__boton">
         <i class="fa-solid fa-circle-arrow-left"></i>
         Volver
     </a>    
@@ -13,13 +13,13 @@
         include_once __DIR__ . '/../../templates/alertas.php'
     ?>
 
-    <form class="formulario" method="POST" enctype="multipart/form-data">
+    <form class="formulario" method="POST" enctype="multipart/form-data" action="/admin/blog/crear">
         <?php include_once __DIR__ . '/formulario.php'; ?>
 
         <input 
             class="formulario__submit formulario__submit--registrar" 
             type="submit" 
-            value="Actualizar Noticia"
+            value="Registar Blog"
         >
     </form>
 </div>

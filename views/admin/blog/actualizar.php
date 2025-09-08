@@ -1,7 +1,7 @@
 <h2 class="dashboard__heading"><?php echo $titulo ?></h2>
 
 <div class="dashboard__contenedor-boton">
-    <a href="/admin/noticias" class="dashboard__boton">
+    <a href="/admin/blog" class="dashboard__boton">
         <i class="fa-solid fa-circle-arrow-left"></i>
         Volver
     </a>    
@@ -19,7 +19,7 @@
         <input 
             class="formulario__submit formulario__submit--registrar" 
             type="submit" 
-            value="Actualizar Noticia"
+            value="Actualizar Blog"
         >
     </form>
 </div>

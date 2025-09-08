@@ -79,10 +79,6 @@ class NoticiasController {
             }
         }
 
-        
-        
-
-        
         $router->render('admin/noticias/crear',[
             'titulo' => 'Crear Noticia',
             'alertas' => $alertas,

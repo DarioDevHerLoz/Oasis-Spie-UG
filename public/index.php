@@ -37,7 +37,13 @@ $router->post('/logout',[AuthController::class, 'logout']);
 
 // Area de administracion
 $router->get('/admin/dashboard',[DashboardController::class, 'index']);
+
 $router->get('/admin/blog',[BlogController::class, 'index']);
+$router->get('/admin/blog/crear',[BlogController::class, 'crear']);
+$router->post('/admin/blog/crear',[BlogController::class, 'crear']);
+$router->get('/admin/blog/actualizar',[BlogController::class, 'actualizar']);
+$router->post('/admin/blog/actualizar',[BlogController::class, 'actualizar']);
+$router->post('/admin/blog/eliminar',[BlogController::class, 'delete']);
 
 $router->get('/admin/dias',[DiasController::class, 'index']);
 $router->get('/admin/dias/crear',[DiasController::class, 'crear']);
