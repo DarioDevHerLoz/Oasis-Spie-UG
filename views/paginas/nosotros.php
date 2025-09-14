@@ -25,25 +25,25 @@
     </div>
 
     <div class="nosotros__grid">
-      <div class="nosotros__card">
+      <div class="nosotros__card" data-id="mision">
         <span class="nosotros__label">Misión <span class="nosotros__dot">.</span></span>
         <div class="nosotros__circle">
           <img src="/img/misión.png" alt="">
         </div>
       </div>
-      <div class="nosotros__card">
+      <div class="nosotros__card" data-id="vision">
         <span class="nosotros__label">Visión <span class="nosotros__dot">.</span></span>
         <div class="nosotros__circle">
           <img src="/img/visión.png" alt="">
         </div>
       </div>
-      <div class="nosotros__card">
+      <div class="nosotros__card" data-id="valores">
         <span class="nosotros__label">Valores <span class="nosotros__dot">.</span></span>
         <div class="nosotros__circle">
           <img src="/img/valores.png" alt="">
         </div>
       </div>
-      <div class="nosotros__card">
+      <div class="nosotros__card" data-id="objetivos">
         <span class="nosotros__label">Objetivos <span class="nosotros__dot">.</span></span>
         <div class="nosotros__circle">
           <img src="/img/objetivos.png" alt="">
