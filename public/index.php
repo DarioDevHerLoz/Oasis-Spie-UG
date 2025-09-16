@@ -60,6 +60,11 @@ $router->post('/admin/horas/actualizar',[HorasController::class, 'actualizar']);
 $router->post('/admin/horas/delete',[HorasController::class, 'delete']);
 
 $router->get('/admin/eventos',[EventosController::class, 'index']);
+$router->get('/admin/eventos/crear',[EventosController::class, 'crear']);
+$router->post('/admin/eventos/crear',[EventosController::class, 'crear']);
+$router->get('/admin/eventos/actualizar',[EventosController::class, 'actualizar']);
+$router->post('/admin/eventos/actualizar',[EventosController::class, 'actualizar']);
+$router->post('/admin/eventos/delete',[EventosController::class, 'delete']);
 
 $router->get('/admin/integrantes',[IntegrantesController::class, 'index']);
 $router->get('/admin/integrantes/crear',[IntegrantesController::class, 'crear']);
@@ -77,6 +82,11 @@ $router->post('/admin/noticias/delete',[NoticiasController::class, 'delete']);
 
 
 $router->get('/admin/ponentes',[PonentesController::class, 'index']);
+$router->get('/admin/ponentes/crear',[PonentesController::class, 'crear']);
+$router->post('/admin/ponentes/crear',[PonentesController::class, 'crear']);
+$router->get('/admin/ponentes/actualizar',[PonentesController::class, 'actualizar']);
+$router->post('/admin/ponentes/actualizar',[PonentesController::class, 'actualizar']);
+$router->post('/admin/ponentes/delete',[PonentesController::class, 'delete']);
 
 $router->get('/admin/usuarios',[UsuariosController::class, 'index']);
 $router->get('/admin/usuarios/crear',[UsuariosController::class, 'crear']);

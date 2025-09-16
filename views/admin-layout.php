@@ -12,6 +12,7 @@
 
 </head>
 <body class="dashboard">
+  <div id="particles-js"></div> 
   <?php 
     include_once __DIR__ .'/templates/admin-header.php';
   ?>
@@ -26,5 +27,7 @@
     ?> 
   </main>
 </div>
+<script src="/build/js/app.min.js" defer></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 </body>
 </html>

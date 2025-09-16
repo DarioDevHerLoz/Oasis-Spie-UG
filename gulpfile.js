@@ -35,6 +35,11 @@ function css() {
 function javascript() {
     return src(paths.js)
         .pipe(webpackStream({
+            mode: 'production',
+            entry: './src/js/app.js',
+            output: {
+                filename: 'app.js'   // aquí defines cómo quieres el archivo final
+            },
             module: {
                 rules: [
                     {
@@ -42,15 +47,10 @@ function javascript() {
                         use: ['style-loader', 'css-loader']
                     }
                 ]
-            },
-            mode: 'production',
-            watch: true,
-            entry: './src/js/app.js'
+            }
         }))
-        .pipe(sourcemaps.init())
         .pipe(terser())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(sourcemaps.write('.'))
         .pipe(dest('public/build/js'));
 }
 
