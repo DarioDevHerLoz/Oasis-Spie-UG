@@ -504,6 +504,7 @@ img {
 .formulario__radio {
   display: flex;
   gap: 2rem;
+  color: #000000;
 }
 .formulario__texto {
   margin-top: 3rem;
@@ -552,6 +553,44 @@ img {
   width: 100%;
 }
 
+.horas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .horas {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.horas__hora, .horas__hora--deshabilitada, .horas__hora--seleccionada {
+  color: #053b97;
+  border: 1px solid #053b97;
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.horas__hora:hover, .horas__hora--deshabilitada:hover, .horas__hora--seleccionada:hover {
+  cursor: pointer;
+}
+.horas__hora--seleccionada {
+  background-color: #053b97;
+  color: #FFFFFF;
+}
+.horas__hora--deshabilitada {
+  border: 1px solid #64748B;
+  color: #64748B;
+  opacity: 0.5;
+}
+.horas__hora--deshabilitada:hover {
+  cursor: not-allowed;
+}
+
 .alerta {
   padding: 1.5rem 1.5rem 1.5rem 3rem;
   text-transform: uppercase;
@@ -568,6 +607,25 @@ img {
   background-color: rgb(172.4626865672, 252.3880597015, 152.6119402985);
   border-left: 0.5rem solid #2bc405;
   color: hsl(108.0628272251, 95.0248756219%, -0.5882352941%);
+}
+
+.auth {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.692);
+  border-radius: 2rem;
+}
+.auth__heading {
+  color: #FFFFFF;
+  text-align: center;
+}
+.auth .formulario__label {
+  color: #FFFFFF;
+}
+
+.auth__texto {
+  font-size: 2rem;
+  color: #FFFFFF;
 }
 
 .nosotros .container {
@@ -769,25 +827,6 @@ img {
     opacity: 1;
     transform: none;
   }
-}
-
-.auth {
-  width: min(95%, 60rem);
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.692);
-  border-radius: 2rem;
-}
-.auth__heading {
-  color: #FFFFFF;
-  text-align: center;
-}
-.auth .formulario__label {
-  color: #FFFFFF;
-}
-
-.auth__texto {
-  font-size: 2rem;
-  color: #FFFFFF;
 }
 
 .dashboard {
@@ -1042,5 +1081,28 @@ img {
   .paginacion__enlace--actual {
     display: inline;
   }
+}
+
+.listado-ponentes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+.listado-ponentes__ponente, .listado-ponentes__ponente--seleccionado {
+  color: #053b97;
+  border: 1px solid #053b97;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.listado-ponentes__ponente:hover, .listado-ponentes__ponente--seleccionado:hover {
+  cursor: pointer;
+}
+.listado-ponentes__ponente--seleccionado {
+  background-color: #053b97;
+  color: #FFFFFF;
 }
 /*# sourceMappingURL=app.css.map */

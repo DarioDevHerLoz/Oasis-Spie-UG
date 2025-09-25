@@ -122,9 +122,9 @@ class PonentesController {
                 header('Location: /login');
             }
 
-            if(!empty($_FILES['imagen']['tmp_name'])) {
+            if(!empty($_FILES['ponentes_imagen']['tmp_name'])) {
                 
-                $carpeta_imagenes = '../public/img/ponentes_imagen';
+                $carpeta_imagenes = '../public/img/ponentes';
 
                 // Crear la carpeta si no existe
                 if(!is_dir($carpeta_imagenes)) {

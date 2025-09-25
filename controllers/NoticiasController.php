@@ -48,7 +48,7 @@ class NoticiasController {
                 header('Location: /login');
             }
 
-                        //Leer imagen
+            //Leer imagen
             if(!empty($_FILES['noticias_imagen']['tmp_name'])){
                 $carpeta_imagenes = '../public/img/noticias';
                 //Crear la carpeta si no existe
