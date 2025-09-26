@@ -33,7 +33,6 @@
                                     <i class="fa-solid fa-circle-xmark"></i>
                                     Eliminar
                                 </button>
-
                             </form>
                         </td>
                     </tr>

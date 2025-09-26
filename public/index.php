@@ -1,18 +1,20 @@
 <?php
 
+use MVC\Router;
+use Model\Eventos;
+use Controllers\APIEventos;
+use Controllers\APIPonentes;
 use Controllers\AuthController;
 use Controllers\BlogController;
-use Controllers\DashboardController;
 use Controllers\DiasController;
-use Controllers\EventosController;
 use Controllers\HorasController;
-use Controllers\IntegrantesController;
-use Controllers\NoticiasController;
+use Controllers\EventosController;
 use Controllers\PaginasController;
+use Controllers\NoticiasController;
 use Controllers\PonentesController;
 use Controllers\UsuariosController;
-use Model\Eventos;
-use MVC\Router;
+use Controllers\DashboardController;
+use Controllers\IntegrantesController;
 
 require_once __DIR__ . '/../includes/app.php';
 
@@ -94,6 +96,10 @@ $router->post('/admin/usuarios/crear',[UsuariosController::class, 'crear']);
 $router->get('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
 $router->post('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
 
+//API Eventos
+$router->get('/api/ponentes', [APIPonentes::class, 'index']);
+$router->get('/api/ponente', [APIPonentes::class, 'ponente']);
+$router->get('/api/eventos-horario', [APIEventos::class, 'index']);
 
 
 $router->comprobarRutas();
