@@ -24,11 +24,14 @@
                         <td class="table__td"><?php echo $ponente->id ?></td>
                         <td class="table__td"><?php echo $ponente->ponentes_nombre . ' ' . $ponente->ponentes_apellido?></td>
                         <td class="table__td table__td--habilidades">
-                            <?php 
+                            <div class="table__flex">
+                             <?php 
                                 $habilidades = explode(',', $ponente->ponentes_habilidades);
                                 foreach($habilidades as $habilidad){ ?>
                                   <div class="table__tag"> <?php echo $habilidad ?> </div>  
-                                <?php } ?>
+                                <?php } ?>   
+                            </div>
+                            
                         </td>
                         <td class="table__td--acciones">
                             <a class="table__accion table__accion--editar" href="/admin/ponentes/actualizar?id=<?php echo $ponente->id ?>">

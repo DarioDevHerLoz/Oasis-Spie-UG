@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     &__header {
-        background-color: v.$gris-oscuro;
+        background-color: v.$mint;
         padding: 2rem;
     }
     &__header-grid{
@@ -46,7 +46,7 @@
     }
 
     &__sidebar {
-        background-color: color.adjust(v.$gris-oscuro, $lightness: 10%);
+        background-color: v.$mint;
         overflow-y: scroll;
         overflow-x: hidden;
         
@@ -61,7 +61,7 @@
         transition: 300ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
     }
     &__enlace {
-        color: color.adjust(v.$gris-oscuro, $lightness: 40%);
+        color: color.adjust(v.$mint, $lightness: -30%);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -103,7 +103,7 @@
     }
 
     &__boton {
-        @include m.boton(v.$gris-oscuro, v.$blanco);
+        @include m.boton(v.$lapiz_lazuli, v.$blanco);
         text-transform: uppercase;
         font-size: 1.4rem;
         @include m.tablet {

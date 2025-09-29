@@ -5,9 +5,14 @@
     width:100%;
     border-collapse: collapse;
 
+    &__flex{
+        display: flex;
+        align-items: center;
+    }
+
     &__tag{
         text-decoration: none;
-        background-color: rgb(0, 0, 0);
+        background-color: v.$light_green;
         padding: 1rem;
         border-radius: 0.5rem;
         font-size: 1.4rem;
@@ -20,7 +25,7 @@
     }
 
     &__thead {
-        background-color: v.$gris-oscuro;
+        background-color: v.$Cerulean;
         color: v.$blanco;
     }
     &__th {
