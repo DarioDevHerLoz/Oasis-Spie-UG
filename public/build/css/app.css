@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -570,6 +571,199 @@ img {
   color: hsl(108.0628272251, 95.0248756219%, -0.5882352941%);
 }
 
+.auth {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.692);
+  border-radius: 2rem;
+}
+.auth__heading {
+  color: #FFFFFF;
+  text-align: center;
+}
+.auth .formulario__label {
+  color: #FFFFFF;
+}
+
+.auth__texto {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+.noticias {
+  padding-block: clamp(32px, 6vw, 80px);
+}
+.noticias__container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 2vw, 32px);
+}
+.noticias__title {
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+  font-size: clamp(28px, 4.5vw, 44px);
+  margin: 0 0 12px;
+}
+.noticias__title--accent {
+  color: #990617;
+}
+.noticias__dot {
+  color: #990617;
+  margin-left: 2px;
+}
+.noticias__subtitle {
+  text-align: center;
+  margin: 0 auto clamp(24px, 5vw, 48px);
+  max-width: 850px;
+  color: #ffffff;
+  font-size: clamp(14px, 1.8vw, 16px);
+}
+.noticias__grid {
+  display: grid;
+  gap: clamp(16px, 3vw, 28px);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .noticias__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .noticias__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.noticias__brand {
+  text-align: center;
+  margin-top: clamp(28px, 6vw, 56px);
+  color: #ffffff;
+}
+.noticias__brand strong {
+  color: #ffffff;
+}
+
+.noticias-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 14px;
+  padding: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+.noticias-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+.noticias-card__media {
+  aspect-ratio: 16/9;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0;
+}
+.noticias-card__media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.35s ease;
+}
+.noticias-card:hover .noticias-card__media img {
+  transform: scale(1.05);
+}
+.noticias-card__date {
+  font-size: 12px;
+  color: #ffffff;
+}
+.noticias-card__title {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Modal base */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+.modal.is-open {
+  display: block;
+}
+.modal .modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 0;
+}
+.modal .modal__dialog {
+  position: relative;
+  z-index: 1;
+  max-width: min(900px, 92vw);
+  max-height: min(90vh, 900px);
+  margin: 5vh auto;
+  background: #111; /* o tu color base */
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  overflow: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: modalIn 0.18s ease-out;
+}
+.modal .modal__close {
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #bbb;
+}
+.modal .modal__close:hover {
+  color: #fff;
+}
+.modal .modal__title {
+  font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+  margin: 8px 0 4px;
+}
+.modal .modal__date {
+  display: block;
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-bottom: 16px;
+}
+.modal .modal__body {
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+@keyframes modalIn {
+  from {
+    transform: translateY(8px);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Bloquear scroll del fondo cuando modal está abierto */
+body.no-scroll {
+  overflow: hidden;
+}
+
 .nosotros .container {
   max-width: 1100px;
   margin-inline: auto;
@@ -769,25 +963,6 @@ img {
     opacity: 1;
     transform: none;
   }
-}
-
-.auth {
-  width: min(95%, 60rem);
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.692);
-  border-radius: 2rem;
-}
-.auth__heading {
-  color: #FFFFFF;
-  text-align: center;
-}
-.auth .formulario__label {
-  color: #FFFFFF;
-}
-
-.auth__texto {
-  font-size: 2rem;
-  color: #FFFFFF;
 }
 
 .dashboard {
