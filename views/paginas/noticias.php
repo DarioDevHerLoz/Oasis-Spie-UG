@@ -22,7 +22,7 @@
         data-noticias
         data-title="La Inteligencia Artificial revoluciona el mundo académico"
         data-date="2024-03-04"
-        data-content="Texto completo de la noticia. Aquí va el detalle amplio con todos los párrafos que desees."
+        data-content="Texto completo de la noticia."
       >
         <figure class="noticias-card__media">
           <img src="/img/noticias/ia.png">
@@ -33,6 +33,10 @@
 
       <article 
         class="noticias-card"
+        data-noticias
+        data-title="La Fotónica En La Actualidad"
+        data-date="2024-03-04"
+        data-content="Texto completo de la noticia."
       >
         <figure class="noticias-card__media">
           <img src="/img/noticias/fotonica.png">
@@ -43,6 +47,10 @@
 
       <article 
         class="noticias-card"
+        data-noticias
+        data-title="¿Innovaciones En Ciberseguridad?"
+        data-date="2024-03-04"
+        data-content="Texto completo de la noticia."
       >
         <figure class="noticias-card__media">
           <img src="/img/noticias/innovaciones.png">
@@ -53,6 +61,10 @@
 
       <article
         class="noticias-card"
+        data-noticias
+        data-title="Lenguajes Modernos De Programación"
+        data-date="2024-03-04"
+        data-content="Texto completo de la noticia."
       >
         <figure class="noticias-card__media">
           <img src="/img/noticias/lenguajes.png">
