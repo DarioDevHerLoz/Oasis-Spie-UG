@@ -1,0 +1,190 @@
+/* ============ Tokens ============ */
+$bg: #0b0b0b;
+$card: #242424;
+$muted: #bdbdbd;
+$text: #f4f4f4;
+$primary: #e50914;
+$radius: 16px;
+$shadow: 0 10px 30px rgba(0,0,0,.35);
+$maxw: 1120px;
+
+@mixin fluid($min, $max) {
+  font-size: clamp($min, $max, $max);
+}
+
+@mixin media($w) {
+  @media (max-width: $w) { @content; }
+}
+
+.eventos {
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background:$bg; color:$text; line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    img{display:block; max-width:100%; height:auto}
+
+    /* ============ Layout ============ */
+    .wrapper{
+    max-width:$maxw; margin:0 auto; padding:32px 20px 80px;
+    }
+
+    /* Header */
+    .kicker{
+    text-align:center; margin:6px 0 24px; color:$muted; font-weight:600; letter-spacing:.2px;
+    }
+    .h1{
+    text-align:center;
+    margin:0 0 8px;
+    @include fluid(28px, 44px);
+    font-weight:800; letter-spacing:.4px;
+    span.red{ color:$primary; }
+    }
+    .sub{
+    text-align:center; color:$muted; margin-bottom:26px; font-weight:600;
+    }
+
+    /* ============ Grid de tarjetas ============ */
+    .grid{
+    display:grid; gap:28px;
+    grid-template-columns: repeat(3, 1fr);
+    @include media(980px){ grid-template-columns: repeat(2, 1fr); }
+    @include media(640px){ grid-template-columns: 1fr; }
+    }
+
+    .card{
+    background: $card; border-radius: $radius; overflow:hidden; box-shadow:$shadow;
+    display:flex; flex-direction:column; min-height:360px;
+    .media{ height:150px; overflow:hidden;
+        img{ width:100%; height:100%; object-fit:cover; }
+    }
+    .content{ padding:16px 18px 10px; }
+    .title{ font-weight:800; margin:2px 0 10px; }
+    .meta{ color:$muted; font-size:14px; margin:10px 0 0;
+        & > div{ margin-bottom:6px; }
+    }
+    .foot{ padding:10px 18px 18px; margin-top:auto; }
+    .btn{
+        display:inline-block; padding:10px 14px; border-radius:12px; font-weight:700;
+        background: #2e2e2e; transition:.2s ease; border:1px solid #3a3a3a;
+        &:hover{ transform: translateY(-2px); box-shadow:0 8px 18px rgba(0,0,0,.35); }
+    }
+    }
+
+    /* ============ Vista detalle ============ */
+    .section{ display:none; }
+    #inicio:target, :root:not(:target) #inicio{ display:block; } /* por defecto listado */
+
+    .detail{
+    display:grid; gap:28px; align-items:flex-start;
+    grid-template-columns: 1.5fr .9fr;
+    @include media(980px){ grid-template-columns:1fr; }
+    }
+
+    .back{
+    display:inline-block; margin-bottom:16px; color:$muted; font-weight:700; opacity:.9;
+    &:hover{ color:$text; }
+    }
+
+    .title-xl{
+    @include fluid(28px, 44px); font-weight:900; margin:0 0 22px;
+    }
+
+    .badges{
+    display:grid; grid-auto-flow:column; grid-auto-columns: 1fr; gap:16px; margin:0 0 22px;
+    @include media(640px){ grid-auto-flow:row; grid-auto-columns:unset; }
+    .badge{
+        background:#171717; border:1px solid #2c2c2c; padding:14px 16px; border-radius:14px;
+        small{ display:block; color:$muted; font-weight:700; margin-bottom:6px; }
+        strong{ font-weight:800; }
+    }
+    }
+
+    .block{
+    background:#111; border:1px solid #1f1f1f; border-radius:$radius; padding:22px; box-shadow:$shadow;
+    }
+
+    .h2{ font-size:20px; font-weight:900; margin:0 0 14px; }
+
+    .speaker{
+    display:flex; align-items:center; gap:14px; margin-top:14px;
+    img{ width:62px; height:62px; border-radius:50%; border:2px solid #333; }
+    .spk-name{ font-weight:800; }
+    .spk-role{ color:$muted; font-size:14px; }
+    }
+
+    /* ============ Utilidades ============ */
+    .mt-8{ margin-top:8px } .mt-12{ margin-top:12px } .mt-16{ margin-top:16px }
+    .center{ text-align:center }
+}
+
+/* ===== Detalle refinado ===== */
+.detail-page { 
+    display:initial;
+}
+
+.hero {
+  margin-bottom: 20px;
+  .title-xl { margin-bottom: 10px; }
+}
+
+.meta-grid{
+  display:grid; gap:14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  .meta-item{
+    background:#171717; border:1px solid #2b2b2b;
+    padding:14px 16px; border-radius:14px;
+    small{ display:block; color:$muted; font-weight:700; margin-bottom:4px; }
+    strong{ font-weight:800; line-height:1.2; }
+  }
+}
+
+/* Dos columnas con aside sticky y mejor ritmo vertical */
+.layout{
+  display:grid; gap:28px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+
+  @media (max-width: 980px){
+    grid-template-columns: 1fr;
+  }
+}
+
+.aside{
+  position: sticky;
+  top: 24px; /* separación desde el top al hacer scroll */
+  align-self: start;
+}
+
+/* Prosa legible (ancho y espaciados) */
+.prose{
+  max-width: 75ch;
+  p{ margin: 0 0 14px; }
+}
+
+/* Lista de ponentes */
+.speakers .speaker{
+  display:flex; gap:14px; align-items:center; margin-top:12px;
+  img{ width:62px; height:62px; border-radius:50%; border:2px solid #333; object-fit:cover; }
+}
+
+/* Alineación del back */
+.back{
+  display:inline-block; margin: 2px 0 10px; color:$muted; font-weight:700;
+  &:hover{ color:$text; }
+}
+
+/* 1) Ocultar todas las secciones por defecto */
+.section { display: none; }
+
+/* 2) Mostrar la sección que sea el objetivo del hash (#evento-1, etc.) */
+.section:target { display: block; }
+
+/* 3) Cuando NO hay hash (al entrar a la página), mostrar solo el listado */
+:root:not(:target) #inicio { display: block; }
+
+
+/* ============ Reset ============ */
+

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -829,6 +830,338 @@ img {
   }
 }
 
+/* ============ Tokens ============ */
+.eventos {
+  /* ============ Layout ============ */
+  /* Header */
+  /* ============ Grid de tarjetas ============ */
+  /* ============ Vista detalle ============ */
+  /* por defecto listado */
+  /* ============ Utilidades ============ */
+}
+.eventos * {
+  box-sizing: border-box;
+}
+.eventos html, .eventos body {
+  height: 100%;
+}
+.eventos body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #0b0b0b;
+  color: #f4f4f4;
+  line-height: 1.5;
+}
+.eventos a {
+  color: inherit;
+  text-decoration: none;
+}
+.eventos img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.eventos .wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+.eventos .kicker {
+  text-align: center;
+  margin: 6px 0 24px;
+  color: #bdbdbd;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.eventos .h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.eventos .h1 span.red {
+  color: #e50914;
+}
+.eventos .sub {
+  text-align: center;
+  color: #bdbdbd;
+  margin-bottom: 26px;
+  font-weight: 600;
+}
+.eventos .grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 980px) {
+  .eventos .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .eventos .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.eventos .card {
+  background: #242424;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.eventos .card .media {
+  height: 150px;
+  overflow: hidden;
+}
+.eventos .card .media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.eventos .card .content {
+  padding: 16px 18px 10px;
+}
+.eventos .card .title {
+  font-weight: 800;
+  margin: 2px 0 10px;
+}
+.eventos .card .meta {
+  color: #bdbdbd;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.eventos .card .meta > div {
+  margin-bottom: 6px;
+}
+.eventos .card .foot {
+  padding: 10px 18px 18px;
+  margin-top: auto;
+}
+.eventos .card .btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  background: #2e2e2e;
+  transition: 0.2s ease;
+  border: 1px solid #3a3a3a;
+}
+.eventos .card .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+.eventos .section {
+  display: none;
+}
+.eventos #inicio:target, .eventos :root:not(:target) #inicio {
+  display: block;
+}
+.eventos .detail {
+  display: grid;
+  gap: 28px;
+  align-items: flex-start;
+  grid-template-columns: 1.5fr 0.9fr;
+}
+@media (max-width: 980px) {
+  .eventos .detail {
+    grid-template-columns: 1fr;
+  }
+}
+.eventos .back {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #bdbdbd;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.eventos .back:hover {
+  color: #f4f4f4;
+}
+.eventos .title-xl {
+  font-size: 44px;
+  font-weight: 900;
+  margin: 0 0 22px;
+}
+.eventos .badges {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 16px;
+  margin: 0 0 22px;
+}
+@media (max-width: 640px) {
+  .eventos .badges {
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+  }
+}
+.eventos .badges .badge {
+  background: #171717;
+  border: 1px solid #2c2c2c;
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+.eventos .badges .badge small {
+  display: block;
+  color: #bdbdbd;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.eventos .badges .badge strong {
+  font-weight: 800;
+}
+.eventos .block {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.eventos .h2 {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 0 0 14px;
+}
+.eventos .speaker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+.eventos .speaker img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 2px solid #333;
+}
+.eventos .speaker .spk-name {
+  font-weight: 800;
+}
+.eventos .speaker .spk-role {
+  color: #bdbdbd;
+  font-size: 14px;
+}
+.eventos .mt-8 {
+  margin-top: 8px;
+}
+.eventos .mt-12 {
+  margin-top: 12px;
+}
+.eventos .mt-16 {
+  margin-top: 16px;
+}
+.eventos .center {
+  text-align: center;
+}
+
+/* ===== Detalle refinado ===== */
+.detail-page {
+  display: initial;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+.hero .title-xl {
+  margin-bottom: 10px;
+}
+
+.meta-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.meta-grid .meta-item {
+  background: #171717;
+  border: 1px solid #2b2b2b;
+  padding: 14px 16px;
+  border-radius: 14px;
+}
+.meta-grid .meta-item small {
+  display: block;
+  color: #bdbdbd;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.meta-grid .meta-item strong {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Dos columnas con aside sticky y mejor ritmo vertical */
+.layout {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+}
+@media (max-width: 980px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aside {
+  position: sticky;
+  top: 24px; /* separación desde el top al hacer scroll */
+  align-self: start;
+}
+
+/* Prosa legible (ancho y espaciados) */
+.prose {
+  max-width: 75ch;
+}
+.prose p {
+  margin: 0 0 14px;
+}
+
+/* Lista de ponentes */
+.speakers .speaker {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 12px;
+}
+.speakers .speaker img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Alineación del back */
+.back {
+  display: inline-block;
+  margin: 2px 0 10px;
+  color: #bdbdbd;
+  font-weight: 700;
+}
+.back:hover {
+  color: #f4f4f4;
+}
+
+/* 1) Ocultar todas las secciones por defecto */
+.section {
+  display: none;
+}
+
+/* 2) Mostrar la sección que sea el objetivo del hash (#evento-1, etc.) */
+.section:target {
+  display: block;
+}
+
+/* 3) Cuando NO hay hash (al entrar a la página), mostrar solo el listado */
+:root:not(:target) #inicio {
+  display: block;
+}
+
+/* ============ Reset ============ */
 .dashboard {
   background-color: #F8FAFC;
   height: 100%;
