@@ -1004,14 +1004,11 @@ body.no-scroll {
   }
 }
 
-<<<<<<< HEAD
 .modal__formulario-titulo {
   display: flex;
   justify-content: center;
 }
 
-=======
->>>>>>> noticiasPage
 .dashboard {
   background-color: #F8FAFC;
   height: 100%;
