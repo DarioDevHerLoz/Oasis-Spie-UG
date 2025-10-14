@@ -37,6 +37,7 @@
             class="formulario__input formulario__input--file"
             id="noticias_imagen"
             name="noticias_imagen"
+            accept="image/png image/jpg"
         >
     </div>
 

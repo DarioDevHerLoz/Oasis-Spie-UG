@@ -7,6 +7,11 @@ use Model\Noticias;
 use MVC\Router;
 class DashboardController {
     public static function index(Router $router){
+
+        if(!is_auth()){
+            header('Location: /login');
+        }
+
         //Obtener blogs
         $blogs = Blog::get(5);
 

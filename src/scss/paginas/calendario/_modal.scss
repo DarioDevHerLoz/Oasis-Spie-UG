@@ -1,0 +1,9 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.modal__formulario-titulo{
+    display: flex;
+    justify-content: center;
+}
+
+

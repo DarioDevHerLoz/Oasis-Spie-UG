@@ -45,5 +45,10 @@
             <i class="fa-solid fa-sun"></i>
             Dias
         </a>
+
+        <a href="/admin/calendario-astronomico" class="dashboard__enlace <?php echo pagina_actual('/calendario-astronomico') ? 'dashboard__enlace--actual' : ''; ?>">
+            <i class="fa-solid fa-calendar-days"></i>
+            Calendario Astronomico
+        </a>
     </nav>
 </aside>

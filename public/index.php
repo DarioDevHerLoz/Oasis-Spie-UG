@@ -2,6 +2,7 @@
 
 use MVC\Router;
 use Model\Eventos;
+use Controllers\CalendarioController;
 use Controllers\APIEventos;
 use Controllers\APIPonentes;
 use Controllers\AuthController;
@@ -95,6 +96,13 @@ $router->get('/admin/usuarios/crear',[UsuariosController::class, 'crear']);
 $router->post('/admin/usuarios/crear',[UsuariosController::class, 'crear']);
 $router->get('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
 $router->post('/admin/usuarios/actualizar',[UsuariosController::class, 'actualizar']);
+
+//Calendario Astronomico
+$router->get('/admin/calendario-astronomico', [CalendarioController::class, 'index']);
+$router->get('/admin/calendario-astronomico/eventos', [CalendarioController::class, 'eventos']);
+$router->post('/admin/calendario-astronomico/crear', [CalendarioController::class, 'crear']);
+$router->post('/admin/calendario-astronomico/actualizar', [CalendarioController::class, 'actualizar']);
+$router->post('/admin/calendario-astronomico/eliminar', [CalendarioController::class, 'eliminar']);
 
 //API Eventos
 $router->get('/api/ponentes', [APIPonentes::class, 'index']);

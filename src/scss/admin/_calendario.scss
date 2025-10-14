@@ -1,0 +1,11 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+
+.fc-toolbar-chunk h2{
+    color: v.$gris-oscuro;
+}
+.fc-daygrid-day-top a {
+    color: v.$negro;
+}

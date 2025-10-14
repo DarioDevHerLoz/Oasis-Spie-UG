@@ -47,6 +47,10 @@ class EventosController {
             return;
         }
 
+        $nombre_imagen = null;
+        $imagen_png = null;
+        $imagen_webp = null;
+
         $alertas = [];
 
         $dias = Dias::all('ASC');

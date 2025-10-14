@@ -32,6 +32,7 @@
             class="formulario__input formulario__input--file"
             id="ponentes_imagen"
             name="ponentes_imagen"
+            
         >
     </div>
 
