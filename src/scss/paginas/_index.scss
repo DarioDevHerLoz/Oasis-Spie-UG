@@ -1,3 +1,4 @@
 @forward 'auth';
 @forward 'nosotros';
-@forward 'calendario'
+@forward 'calendario';
+@use 'noticias';
