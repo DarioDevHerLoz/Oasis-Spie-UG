@@ -910,94 +910,6 @@ img {
   margin: 0;
 }
 .noticias-card__media img {
-/* ============ Tokens ============ */
-.eventos {
-  /* ============ Layout ============ */
-  /* Header */
-  /* ============ Grid de tarjetas ============ */
-  /* ============ Vista detalle ============ */
-  /* por defecto listado */
-  /* ============ Utilidades ============ */
-}
-.eventos * {
-  box-sizing: border-box;
-}
-.eventos html, .eventos body {
-  height: 100%;
-}
-.eventos body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #0b0b0b;
-  color: #f4f4f4;
-  line-height: 1.5;
-}
-.eventos a {
-  color: inherit;
-  text-decoration: none;
-}
-.eventos img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.eventos .wrapper {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 32px 20px 80px;
-}
-.eventos .kicker {
-  text-align: center;
-  margin: 6px 0 24px;
-  color: #bdbdbd;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-}
-.eventos .h1 {
-  text-align: center;
-  margin: 0 0 8px;
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: 0.4px;
-}
-.eventos .h1 span.red {
-  color: #e50914;
-}
-.eventos .sub {
-  text-align: center;
-  color: #bdbdbd;
-  margin-bottom: 26px;
-  font-weight: 600;
-}
-.eventos .grid {
-  display: grid;
-  gap: 28px;
-  grid-template-columns: repeat(3, 1fr);
-}
-@media (max-width: 980px) {
-  .eventos .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .eventos .grid {
-    grid-template-columns: 1fr;
-  }
-}
-.eventos .card {
-  background: #242424;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
-  min-height: 360px;
-}
-.eventos .card .media {
-  height: 150px;
-  overflow: hidden;
-}
-.eventos .card .media img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1097,6 +1009,98 @@ body.no-scroll {
   overflow: hidden;
 }
 
+/* ============ Tokens ============ */
+.eventos {
+  /* ============ Layout ============ */
+  /* Header */
+  /* ============ Grid de tarjetas ============ */
+  /* ============ Vista detalle ============ */
+  /* por defecto listado */
+  /* ============ Utilidades ============ */
+}
+.eventos * {
+  box-sizing: border-box;
+}
+.eventos html, .eventos body {
+  height: 100%;
+}
+.eventos body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #0b0b0b;
+  color: #f4f4f4;
+  line-height: 1.5;
+}
+.eventos a {
+  color: inherit;
+  text-decoration: none;
+}
+.eventos img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.eventos .wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+.eventos .kicker {
+  text-align: center;
+  margin: 6px 0 24px;
+  color: #bdbdbd;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+.eventos .h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+.eventos .h1 span.red {
+  color: #e50914;
+}
+.eventos .sub {
+  text-align: center;
+  color: #bdbdbd;
+  margin-bottom: 26px;
+  font-weight: 600;
+}
+.eventos .grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 980px) {
+  .eventos .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .eventos .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.eventos .card {
+  background: #242424;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.eventos .card .media {
+  height: 150px;
+  overflow: hidden;
+}
+.eventos .card .media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .eventos .card .content {
   padding: 16px 18px 10px;
