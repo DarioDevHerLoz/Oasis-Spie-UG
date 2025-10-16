@@ -66,6 +66,7 @@
                 });
 
                 document.querySelector('.body').appendChild(modal);
+                modal.classList.add('is-open');
             }
         }
     })

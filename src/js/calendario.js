@@ -160,6 +160,9 @@
                 
                 
                 document.querySelector('.dashboard').appendChild(modal);
+                // Mostrar modal inmediatamente
+                modal.classList.add('is-open');
+                document.body.classList.add('no-scroll');
             }
         }
 
@@ -186,7 +189,9 @@
                 if(resultado.tipo === 'exito'){
                     calendar.refetchEvents();
                     const modal = document.querySelector('.modal');
-                    setTimeout(() => modal.remove(), 3000);
+                    setTimeout(() => 
+                        modal.remove()
+                    , 3000);
                 }
             } catch (error) {
                 console.log(error);
@@ -260,6 +265,7 @@
             referencia.parentElement.insertBefore(alerta, referencia)
             setTimeout(() => {
                 alerta.remove();
+                document.body.classList.remove('no-scroll')
             }, 5000)
         }
     })
