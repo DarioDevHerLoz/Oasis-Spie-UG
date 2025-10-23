@@ -152,12 +152,12 @@ a:hover { text-decoration: underline; }
   gap: 1.25rem;
 }
 .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid--4 { grid-template-columns:repeat(1fr 1fr 1fr 1fr); }
 
 @media (max-width: 960px) {
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .grid--4 { grid-template-columns: repeat(2, 1fr); }
-  .profile--wide { grid-template-columns: 140px 1fr; }
+  .profile--wide { grid-template-columns: 140px 1fr; } 
 }
 
 @media (max-width: 560px) {
@@ -167,6 +167,7 @@ a:hover { text-decoration: underline; }
 
 .card {
   display: grid;
+  width: 100%;
   grid-template-rows: auto auto auto auto;
   gap: .5rem;
   padding: 1rem;
@@ -303,5 +304,19 @@ a:hover { text-decoration: underline; }
 .hlist--snap > .card {
   scroll-snap-align: start;
   min-width: clamp(260px, 36vw, 320px); /* tamaño responsivo de tarjeta */
+}
+
+.equipo{
+  &__link{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__link a{
+    color: #b11414;
+  }
+  &__link a:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 

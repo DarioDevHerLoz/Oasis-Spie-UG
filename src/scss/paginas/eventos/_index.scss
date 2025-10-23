@@ -1,3 +1,6 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
 /* ============ Tokens ============ */
 $bg: #0b0b0b;
 $card: #242424;
@@ -188,3 +191,70 @@ $maxw: 1120px;
 
 /* ============ Reset ============ */
 
+.evento {
+  &--imagen{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--imagen div{
+    width: 60%;
+  }
+
+  &--imagen div picture img{
+    border-radius: 2rem;
+  }
+
+  &__datos__importantes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2rem;
+    
+  }
+  &__datos__importantes div{
+    margin: 2rem;
+  }
+  &__datos__importantes div p {
+    font-weight: v.$bold;
+  }
+  &__datos__importantes div p span{
+    color: #e50914;
+  }
+
+  &__contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    &--texto{
+      margin: 3rem;
+    }
+    &__ponente--imagen{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__ponente__imagen{
+    display: flex;
+    width: 19rem;
+    background-color: #333;
+    border-radius: 25rem;
+  }
+
+  &__ponente__imagen img{
+    padding: 1rem;
+  }
+
+  &__ponente--habilidad{
+    margin: 0.5rem;
+  }
+
+
+
+}

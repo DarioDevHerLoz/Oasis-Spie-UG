@@ -55,7 +55,7 @@
 
         async function buscarEventos() {
             const {aula, dia, fecha} = busqueda
-            const url = `/api/eventos-horario?dia_eve_id=${dia}&evento_aula=${aula}&evento_fecha=${fecha}`;
+            const url = `${location.origin}/api/eventos-horario?dia_eve_id=${dia}&evento_aula=${aula}&evento_fecha=${fecha}`;
             
             const resultado = await fetch(url);
             const eventos = await resultado.json();

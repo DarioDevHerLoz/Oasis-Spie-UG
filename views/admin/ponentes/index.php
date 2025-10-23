@@ -54,3 +54,7 @@
           <p class="text-center dashboard__void">No Hay Ponentes Aún</p>  
     <?php } ?>
 </div>
+
+<?php 
+    echo $paginacion;
+?>

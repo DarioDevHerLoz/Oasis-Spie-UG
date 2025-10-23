@@ -64,3 +64,6 @@
           <p class="text-center dashboard__void">No Hay Eventos Aún</p>  
     <?php } ?>
 </div>
+<?php 
+    echo $paginacion;
+?>

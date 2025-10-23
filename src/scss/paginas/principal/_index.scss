@@ -1,0 +1,62 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.principal {
+    &__hero {
+        position: relative; // Necesario para posicionar el texto dentro
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; // Evita que algo se salga del contenedor
+    }
+
+    &__hero--imagen {
+        position: relative;
+
+        picture,
+        picture img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover; // Hace que la imagen ocupe todo sin deformarse
+            border-radius: 2rem;
+            display: block;
+        }
+    }
+
+    &__hero--texto {
+        position: absolute; // Se coloca encima de la imagen
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        z-index: 2; // Asegura que quede encima
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.4); // Fondo semitransparente opcional
+        border-radius: 1rem;
+    }
+
+    &__hero--texto div{
+        display: flex;
+        justify-content: center;
+        position: absolute; // Se coloca encima de la imagen
+        width: 60%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); // Centrado perfecto
+        text-align: center;
+        color: white;
+        z-index: 2; // Asegura que quede encima
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    &__hero--texto div h1{
+        font-size: 6rem;
+    }
+
+    &__hero--rojo {
+        color: v.$rojo;
+    }
+}

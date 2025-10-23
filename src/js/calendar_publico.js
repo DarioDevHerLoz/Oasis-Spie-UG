@@ -12,10 +12,8 @@
                     center: 'title',
                     right: 'dayGridMonth'
                 },
-                events: 'http://localhost:3001/admin/calendario-astronomico/eventos',
+                events: `${location.origin}/admin/calendario-astronomico/eventos`,
                 eventClick: function(info){
-                    console.log('Diste Click....');
-                    console.log(info.event.title)
                      mostrarModal(info.event)
                 }
             });

@@ -1,3 +1,6 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
 // Paleta
 $bg: #0b0b0b;
 $fg: #ffffff;
@@ -22,7 +25,7 @@ $accent: #990617; // rojo del título y punto
     letter-spacing: .2px;
     line-height: 1.1;
     font-size: clamp(28px, 4.5vw, 44px);
-    margin: 0 0 12px;
+    margin: 1rem;
 
     &--accent { color: $accent; }
   }
@@ -59,6 +62,21 @@ $accent: #990617; // rojo del título y punto
     color: $fg;
 
     strong { color: $fg; }
+  }
+
+  &__contenedor--enlace {
+    display: flex;
+    justify-content: flex-end
+  }
+
+  &__contenedor--enlace a{
+    color: #e4041e;
+    font-size: 1.5rem;
+    font-weight: v.$bold;
+  }
+  &__contenedor--enlace a:hover{
+    cursor:pointer;
+    color: v.$blanco;
   }
 }
 
@@ -179,6 +197,64 @@ $accent: #990617; // rojo del título y punto
 
 /* Bloquear scroll del fondo cuando modal está abierto */
 body.no-scroll { overflow: hidden; }
+
+
+
+.noticia {
+  display: block;
+
+  &__titulo {
+    text-align: center;
+    margin: 5rem;
+  }
+
+  &__contenedor_imagen {
+    display: flex;
+    width: 60rem;
+
+    img {
+      border-radius: 2rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contenido {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    &--texto {
+      margin: 2rem;
+      padding: 3rem;
+    }
+  }
+
+  &__creditos {
+    display: flex;             // mejor que grid para separar en extremos
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+
+    div p span {
+      color: #e4041e;
+      font-weight: v.$bold;
+    }
+  }
+
+  // Media query para tablet en adelante
+  @include m.tablet {
+    background-color: #00000077;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 4rem;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
 
 
 

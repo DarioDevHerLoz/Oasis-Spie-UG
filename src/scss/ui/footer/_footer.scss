@@ -6,6 +6,7 @@
   &__contenido {
     @include  m.grid(1,2rem);
     justify-items: center;
+    padding: 2rem;
   }
   &__redes {
     width: 20%;

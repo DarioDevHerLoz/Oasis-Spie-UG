@@ -55,3 +55,6 @@
           <p class="text-center dashboard__void">No Hay Dias Aún</p>  
     <?php } ?>
 </div>
+<?php 
+    echo $paginacion;
+?>

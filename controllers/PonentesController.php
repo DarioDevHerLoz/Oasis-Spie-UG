@@ -30,7 +30,8 @@ class PonentesController {
         $ponentes = Ponentes::paginar($registros_por_pagina, $paginacion->offset());
         $router->render('admin/ponentes/index',[
             'titulo' => 'Ponentes',
-            'ponentes' => $ponentes
+            'ponentes' => $ponentes,
+            'paginacion' => $paginacion->paginacion()
         ]);
     }
 

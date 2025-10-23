@@ -1,3 +1,8 @@
 includes/.env
 node_modules
 /vendor/
+public/blog
+public/eventos
+public/integrantes
+public/noticias
+public/ponentes

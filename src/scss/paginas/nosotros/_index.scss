@@ -25,6 +25,20 @@ $radius: 1.25rem;
 
   .container { @include container; }
 
+  &__link{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link a{
+    color: #c62828;
+  }
+
+  &__link a:hover{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
   &__title {
     text-align: center;
     font-size: clamp(1.8rem, 3vw, 2.4rem);

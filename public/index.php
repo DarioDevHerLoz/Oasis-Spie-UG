@@ -28,7 +28,10 @@ $router->get('/',[PaginasController::class, 'index']);
 $router->get('/nosotros',[PaginasController::class, 'nosotros']);
 $router->get('/equipo',[PaginasController::class, 'equipo']);
 $router->get('/noticias',[PaginasController::class, 'noticias']);
+$router->get('/noticia',[PaginasController::class, 'noticia']);
 $router->get('/eventos',[PaginasController::class, 'eventos']);
+$router->get('/evento',[PaginasController::class, 'evento']);
+$router->get('/blogs',[PaginasController::class, 'blogs']);
 $router->get('/blog',[PaginasController::class, 'blog']);
 $router->get('/calendario-astronomico',[PaginasController::class, 'calendario_astronomico']);
 

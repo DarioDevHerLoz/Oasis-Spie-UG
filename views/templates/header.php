@@ -9,7 +9,7 @@
         <a class="header__enlace"  href="/equipo">Equipo</a>
         <a class="header__enlace"  href="/noticias">Noticias</a>
         <a class="header__enlace"  href="/eventos">Eventos</a>
-        <a class="header__enlace"  href="/blog">Blog</a>
+        <a class="header__enlace"  href="/blogs">Blog</a>
         <a class="header__enlace"  href="/calendario-astronomico">Calendario Astronomico</a>
       </div>
   </div>

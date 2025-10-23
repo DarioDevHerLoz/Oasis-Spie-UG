@@ -31,7 +31,7 @@
             <?php foreach($menos_disponibles as $evento) { ?>
                 <div class="bloque__contenido">
                     <p class="bloque__texto">
-                        <?php echo $evento->nombre . " - " . $evento->disponibles . ' Disponibles'; ?>
+                        <?php echo $evento->evento_nombre . " - " . $evento->evento_disponibles . ' Disponibles'; ?>
                     </p>
                 </div>
             <?php } ?>
@@ -42,7 +42,7 @@
             <?php foreach($noticias as $noticia) { ?>
                 <div class="bloque__contenido">
                     <p class="bloque__texto">
-                        <?php echo $noticias->noticias_titulo . " - " . $noticias->noticias_date; ?>
+                        <?php echo $noticia->noticias_titulo . " - " . $noticia->noticias_date; ?>
                     </p>
                 </div>
             <?php } ?>

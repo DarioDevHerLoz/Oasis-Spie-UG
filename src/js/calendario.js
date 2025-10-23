@@ -20,7 +20,7 @@
                         extendedProps: {}
                     })
                 },
-                events: 'http://localhost:3001/admin/calendario-astronomico/eventos',
+                events: `${location.origin}/admin/calendario-astronomico/eventos`,
                 eventClick: function(info){
                      mostrarFormulario(true, info.event)
                 }
@@ -178,7 +178,7 @@
             }
 
             try {
-                const url = 'http://localhost:3001/admin/calendario-astronomico/crear';
+                const url = `${location.origin}/admin/calendario-astronomico/crear`;
                 const respuesta = await fetch(url, {
                     method: 'POST',
                     body: datos,
@@ -210,7 +210,7 @@
             }
 
             try {
-                const url = 'http://localhost:3001/admin/calendario-astronomico/actualizar';
+                const url = `${location.origin}/admin/calendario-astronomico/actualizar`;
                 const respuesta = await fetch(url, {
                     method: 'POST',
                     body: datos
@@ -234,7 +234,7 @@
             const datos = new FormData();
             datos.append('id', evento.id);
             try {
-                const url = 'http://localhost:3001/admin/calendario-astronomico/eliminar';
+                const url = `${location.origin}/admin/calendario-astronomico/eliminar`;
                 const respuesta = await fetch(url, {
                     method: 'POST',
                     body: datos

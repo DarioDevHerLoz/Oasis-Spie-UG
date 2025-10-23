@@ -47,3 +47,7 @@
           <p class="text-center dashboard__void">No Hay Noticias Aún</p>  
     <?php } ?>
 </div>
+
+<?php 
+    echo $paginacion;
+?>
