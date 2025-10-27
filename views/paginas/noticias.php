@@ -20,9 +20,9 @@
           >
           <figure class="noticias-card__media">
             <picture>
-                    <source srcset="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.webp" type="image/webp">
-                    <source srcset="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" type="image/png">
-                    <img src="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" alt="Imagen Noticia">
+                    <source srcset="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.webp" type="image/webp">
+                    <source srcset="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" type="image/png">
+                    <img src="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" alt="Imagen Noticia">
             </picture>
           </figure>
           <time class="noticias-card__date" datetime="2024-03-04"><?php echo $noticia->noticias_date ?></time>

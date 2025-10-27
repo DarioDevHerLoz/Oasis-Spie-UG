@@ -3,9 +3,9 @@
     <div class="evento--imagen">
         <div class="">
             <picture>
-                    <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/eventos/' . $evento->evento_imagen; ?>.webp" type="image/webp">
-                    <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/eventos/' . $evento->evento_imagen; ?>.png" type="image/png">
-                    <img width="200" src="<?php echo $_ENV['HOST'] . '/img/eventos/' . $evento->evento_imagen; ?>.png" alt="Imagen Noticia">
+                    <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/eventos/' . $evento->evento_imagen; ?>.webp" type="image/webp">
+                    <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/eventos/' . $evento->evento_imagen; ?>.png" type="image/png">
+                    <img width="200" src="<?php echo $_ENV['APP_URL'] . '/img/eventos/' . $evento->evento_imagen; ?>.png" alt="Imagen Noticia">
             </picture>            
         </div>
 
@@ -55,9 +55,9 @@
             <h3>Ponente</h3>
             <div class="evento__ponente__imagen">
                 <picture>
-                        <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.webp" type="image/webp">
-                        <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" type="image/png">
-                        <img width="200" src="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" alt="Imagen Noticia">
+                        <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.webp" type="image/webp">
+                        <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" type="image/png">
+                        <img width="200" src="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" alt="Imagen Noticia">
                 </picture>
             </div>
             <h4><?php echo $ponente->ponentes_nombre . ' ' . $ponente->ponentes_apellido ; ?></h4>

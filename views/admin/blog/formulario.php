@@ -43,9 +43,9 @@
     <?php if(isset($blog->imagen_actual)){?>
         <p class="formulario__texto">Imagen Actual:</p>
         <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog->blog_imagen; ?>.webp" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog->blog_imagen; ?>.png" type="image/png">
-                <img src="<?php echo $_ENV['HOST'] . '/img/blogs/' . $blog->blog_imagen;?>.png" alt="Imagen blog">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog->blog_imagen; ?>.webp" type="image/webp">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog->blog_imagen; ?>.png" type="image/png">
+                <img src="<?php echo $_ENV['APP_URL'] . '/img/blogs/' . $blog->blog_imagen;?>.png" alt="Imagen blog">
         </picture>
     <?php }?>
 </fieldset>

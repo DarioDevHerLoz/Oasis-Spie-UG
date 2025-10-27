@@ -15,14 +15,14 @@ class Router {
   }
 
   public function comprobarRutas(){
+    
     $currentURL = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
-    $url_actual = $_SERVER['PATH_INFO'] ?? '/';
     $method = $_SERVER['REQUEST_METHOD'];
 
     if($method === 'GET'){
-      $fn = $this->getRoutes[$url_actual] ?? null;
+      $fn = $this->getRoutes[$currentURL] ?? null;
     } else {
-      $fn = $this->postRoutes[$url_actual] ?? null;
+      $fn = $this->postRoutes[$currentURL] ?? null;
     }
 
     if( $fn ) {

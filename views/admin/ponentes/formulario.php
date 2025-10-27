@@ -40,9 +40,9 @@
         <p class="formulario__texto">Imagen Actual:</p>
         <div class="formulario__imagen">
             <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.webp" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" type="image/png">
-                <img src="<?php echo $_ENV['HOST'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" alt="Imagen Ponente">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.webp" type="image/webp">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" type="image/png">
+                <img src="<?php echo $_ENV['APP_URL'] . '/img/ponentes/' . $ponente->ponentes_imagen; ?>.png" alt="Imagen Ponente">
             </picture>
         </div>
 

@@ -29,9 +29,9 @@
         <article class="profile profile--wide">
           <div class="profile__avatar">
             <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.webp" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" type="image/png">
-                <img src="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" alt="Imagen Asesor Academico">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.webp" type="image/webp">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" type="image/png">
+                <img src="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" alt="Imagen Asesor Academico">
             </picture>
           </div>
           <div class="profile__content">
@@ -66,9 +66,9 @@
             <span class="card__title"><?= $integrante->integrantes_rol ?></span>
             <span class="card__avatar">
               <picture>
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.webp" type="image/webp">
-                <source srcset="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" type="image/png">
-                <img src="<?php echo $_ENV['HOST'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" alt="Imagen Asesor Academico">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.webp" type="image/webp">
+                <source srcset="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" type="image/png">
+                <img src="<?php echo $_ENV['APP_URL'] . '/img/integrantes/' . $integrante->integrantes_imagen; ?>.png" alt="Imagen Asesor Academico">
               </picture>
             </span>
             <span class="card__name"><?= $integrante->integrantes_nombre ?></span>

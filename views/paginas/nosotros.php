@@ -6,7 +6,7 @@
       </h2>
 
       <div class="nosotros__intro">
-          <img src="<?php echo $_ENV['HOST'] . '/img/estaticas/equipo'?>.jpg"  class="nosotros__photo" <?php aos_animation(); ?>>
+          <img src="<?php echo $_ENV['APP_URL'] . '/img/estaticas/equipo'?>.jpg"  class="nosotros__photo" <?php aos_animation(); ?>>
 
         <div class="nosotros__desc" <?php aos_animation(); ?> >
           <p>Somos un grupo estudiantil apasionado por la óptica, la fonética, la astronomía y la ciencia en general. Nuestra misión es fomentar el interés y la difusión del conocimiento en estas áreas a través de actividades académicas, divulgativas y experimentales.</p>

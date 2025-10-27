@@ -12,9 +12,9 @@
             <div class="blog__contenido swiper-slide">
               <div class="blog__contenido--imagen">
                 <picture>
-                  <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.webp" type="image/webp">
-                  <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.png" type="image/png">
-                  <img width="200" src="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.png" alt="Imagen Noticia">
+                  <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.webp" type="image/webp">
+                  <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.png" type="image/png">
+                  <img width="200" src="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog_slider->blog_imagen; ?>.png" alt="Imagen Noticia">
                 </picture>
               </div>
               <div class="blog__contenido--texto">
@@ -40,9 +40,9 @@
         <div class="blog__blog">
           <div class="blog__imagen">
             <picture>
-              <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog->blog_imagen; ?>.webp" type="image/webp">
-              <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog->blog_imagen;  ?>.png" type="image/png">
-              <img class="blog__img" width="200" src="<?php echo $_ENV['HOST'] . '/img/blog/' . $blog->blog_imagen;  ?>.png" alt="Imagen Noticia">
+              <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog->blog_imagen; ?>.webp" type="image/webp">
+              <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog->blog_imagen;  ?>.png" type="image/png">
+              <img class="blog__img" width="200" src="<?php echo $_ENV['APP_URL'] . '/img/blog/' . $blog->blog_imagen;  ?>.png" alt="Imagen Noticia">
             </picture>
           </div>
           <div class="blog__informacion">

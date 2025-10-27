@@ -3,9 +3,9 @@
     <section class="noticia">
         <div class="noticia__contenedor__imagen">
             <picture>
-                    <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.webp" type="image/webp">
-                    <source width="200" srcset="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" type="image/png">
-                    <img width="200" src="<?php echo $_ENV['HOST'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" alt="Imagen Noticia">
+                    <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.webp" type="image/webp">
+                    <source width="200" srcset="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" type="image/png">
+                    <img width="200" src="<?php echo $_ENV['APP_URL'] . '/img/noticias/' . $noticia->noticias_imagen; ?>.png" alt="Imagen Noticia">
             </picture>
         </div>
         <div class="noticia__contenido">
